@@ -1,0 +1,56 @@
+.display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.keypad {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+}
+
+button {
+  flex: 1;
+  padding: 10px;
+  margin: 5px;
+  font-size: 18px;
+  border-color: aliceblue;
+  border-radius: 5rem;
+  background-color: aliceblue;
+}
+
+.function {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 2rem;
+  background: rgb(66, 194, 255);
+  background: linear-gradient(238deg, rgba(66, 194, 255, 1) 0%, rgba(239, 255, 253, 1) 100%);
+}
+
+.col-2 {
+  background-color: #9edefc;
+  padding: 1rem;
+  border-radius: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.col-7 {
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+input{
+  margin-top: 1rem;
+  font-size: medium;
+  border-style: double;
+  text-align: end;
+  outline: none;
+  border-color: #FBFBFB;
+  background-color: #FBFBFB;
+}
