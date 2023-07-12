@@ -33,7 +33,6 @@ button {
 
 .col-2 {
   background-color: #9edefc;
-  padding: 1rem;
   border-radius: 2rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -45,12 +44,34 @@ button {
   margin-bottom: 1rem;
 }
 
+.col-7 .toprow{
+  background-color: #9edefc;
+  border-radius: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 input{
   margin-top: 1rem;
-  font-size: medium;
+  font-size: large;
+  font-size: 24px;
   border-style: double;
   text-align: end;
   outline: none;
   border-color: #FBFBFB;
   background-color: #FBFBFB;
+  font-weight: bold;
+}
+
+input .func{
+color: rgb(83, 83, 83);
+}
+
+
+.col-2 button, .toprow button{
+  background-color: #9edefc;
+}
+
+button{
+  border: none;
 }

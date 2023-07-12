@@ -6,8 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  historyy = 'History';
+  divided = '/';
+  multiplication = '*';
   expression: string = '';
   result: string = '';
+  history: string[] = [];
 
   appendValue(value: string) {
     this.expression += value;
@@ -20,6 +24,7 @@ export class HomeComponent {
   calculate() {
     try {
       this.result = eval(this.expression);
+      this.history.push(this.result);
     } catch (error) {
       this.result = 'Error';
     }
@@ -30,20 +35,14 @@ export class HomeComponent {
     this.result = '';
   }
 
-  showHistory() {
-    const history = [
-      { expression: '2+2', result: '4' },
-      { expression: '3*5', result: '15' },
-      { expression: '8-6', result: '2' }
-    ];
-  
+  showHistory() { 
     const historyContainer = document.getElementById('history-container');
     if (historyContainer) {
       historyContainer.innerHTML = ''; // Eski içeriği temizle
   
-      for (const item of history) {
+      for (const item of this.history) {
         const historyItem = document.createElement('div');
-        historyItem.textContent = `${item.expression} = ${item.result}`;
+        historyItem.textContent = `${this.expression} = ${item}`;
         historyContainer.appendChild(historyItem);
       }
     }
