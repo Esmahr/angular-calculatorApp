@@ -13,6 +13,21 @@ export class HomeComponent {
   result: string = '';
   history: string[] = [];
 
+  title = 'dark';
+  isDarkTheme = false;
+
+  togglebutton() {
+    this.isDarkTheme = !this.isDarkTheme
+    if (this.title == "dark") {
+      this.title = "light";
+    }
+    else {
+      this.title = "dark"
+    }
+  }
+
+
+
   appendValue(value: string) {
     this.expression += value;
   }
@@ -35,11 +50,10 @@ export class HomeComponent {
     this.result = '';
   }
 
-  showHistory() { 
+  showHistory() {
     const historyContainer = document.getElementById('history-container');
     if (historyContainer) {
-      historyContainer.innerHTML = ''; // Eski içeriği temizle
-  
+
       for (const item of this.history) {
         const historyItem = document.createElement('div');
         historyItem.textContent = `${this.expression} = ${item}`;
@@ -47,5 +61,5 @@ export class HomeComponent {
       }
     }
   }
-  
+
 }
