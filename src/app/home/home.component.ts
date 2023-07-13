@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
   historyy = 'History';
@@ -13,16 +13,16 @@ export class HomeComponent {
   result: string = '';
   history: string[] = [];
 
-  title = 'dark';
+  title = 'light';
   isDarkTheme = false;
 
   togglebutton() {
     this.isDarkTheme = !this.isDarkTheme
-    if (this.title == "dark") {
-      this.title = "light";
+    if (this.title == "light") {
+      this.title = "dark";
     }
     else {
-      this.title = "dark"
+      this.title = "light"
     }
   }
 
