@@ -1,27 +1,38 @@
 # AngularCalculatorApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+Bu proje, [Angular CLI](https://github.com/angular/angular-cli) sürüm 16.0.1 ile oluşturuldu.
 
-## Development server
+## Geliştirme sunucusu
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Geliştirme sunucusunu çalıştırmak için `ng serve` komutunu kullanın. Tarayıcınızı `http://localhost:4200/` adresine yönlendirin. Kaynak dosyalarından herhangi birini değiştirirseniz, uygulama otomatik olarak yeniden yüklenecektir.
 
-## Code scaffolding
+## Kod iskeleti
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Yeni bir bileşen oluşturmak için `ng generate component component-name` komutunu kullanın. Ayrıca `ng generate directive|pipe|service|class|guard|interface|enum|module`komutunu da kullanabilirsiniz.
 
-## Build
+## Derleme
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Projenin derlenmesi için `ng build` komutunu kullanın. Derleme ürünleri `dist/` dizininde saklanacaktır.
 
-## Running unit tests
+## Birim testlerin çalıştırılması
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Birim testleri [Karma](https://karma-runner.github.io) aracılığıyla çalıştırmak için `ng test` komutunu kullanın.
 
-## Running end-to-end tests
+## Uçtan uca testlerin çalıştırılması
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Uçtan uca testleri istediğiniz bir platform aracılığıyla çalıştırmak için `ng e2e` komutunu kullanın. Bu komutu kullanabilmek için öncelikle uçtan uca test yeteneklerini uygulayan bir paket eklemeniz gerekmektedir.
 
-## Further help
+## Daha fazla yardım
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Angular CLI hakkında daha fazla yardım almak için `ng help` komutunu kullanabilir veya [Angular CLI Genel Bakış ve Komut Referansı](https://angular.io/cli) sayfasını ziyaret edebilirsiniz.
+
+
+# Projenin ekran görüntüleri
+
+### Light Mode
+
+![](/src/assets/lightmode.png)
+
+### Dark Mode
+
+![](/src/assets/darkmode.png)

@@ -2,8 +2,18 @@
     .switch {
         position: relative;
         display: inline-block;
-        width: 60px;
-        height: 34px;
+        width: 7.625rem;
+        height: 2.75rem;
+        flex-shrink: 0;
+        border-radius: 2.5rem;
+        background-color: #A9DCFD;
+        margin-top: 2.5rem;
+    }
+
+    header {
+        svg {
+            color: #373737;
+        }
     }
 
     .switch input {
@@ -19,7 +29,6 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: #6dd1ff;
         -webkit-transition: .4s;
         transition: .4s;
     }
@@ -27,11 +36,12 @@
     .slider:before {
         position: absolute;
         content: "";
-        height: 30px;
-        width: 30px;
-        left: 4px;
-        bottom: 4px;
-        top: 2px;
+        width: 1.85856rem;
+        height: 1.85856rem;
+        flex-shrink: 0;
+        left: 7px;
+        top: 6px;
+        bottom: 1px;
         -webkit-transition: .4s;
         transition: .4s;
         background-image: url(../../assets/img/Sun.png);
@@ -134,6 +144,16 @@
         font-style: normal;
         font-weight: 600;
         line-height: normal;
+
+        .equal {
+            background-image: url(../../assets/img/=.png);
+            height: 10px;
+            width: 16px;
+            margin-right: 20rem;
+            padding-right: 1rem;
+            position: fixed;
+            margin-top: 2rem;
+        }
     }
 
     .expression {
@@ -149,6 +169,7 @@
         font-style: normal;
         font-weight: 500;
         line-height: normal;
+        margin-top: 10rem;
     }
 
 }
@@ -157,8 +178,18 @@
     .switch {
         position: relative;
         display: inline-block;
-        width: 60px;
-        height: 34px;
+        width: 7.625rem;
+        height: 2.75rem;
+        flex-shrink: 0;
+        border-radius: 2.5rem;
+        background-color: #003661;
+        margin-top: 2.5rem;
+    }
+
+    header {
+        svg {
+            color: #FBFBFB;
+        }
     }
 
     .switch input {
@@ -174,7 +205,6 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: #ccc;
         -webkit-transition: .4s;
         transition: .4s;
     }
@@ -182,22 +212,23 @@
     .slider:before {
         position: absolute;
         content: "";
-        height: 30px;
-        width: 30px;
-        left: 4px;
-        bottom: 4px;
-        top: 2px;
+        width: 1.85856rem;
+        height: 1.85856rem;
+        flex-shrink: 0;
+        left: 57px;
+        top: 6px;
+        bottom: 1px;
         -webkit-transition: .4s;
         transition: .4s;
         background-image: url(../../assets/img/Moon.png);
     }
 
     input:checked+.slider {
-        background-color: #19376D;
+        background-color: #003661;
     }
 
     input:focus+.slider {
-        box-shadow: 0 0 1px #19376D;
+        box-shadow: 0 0 1px #576CBC;
     }
 
     input:checked+.slider:before {
@@ -218,5 +249,101 @@
     width: 26.4375rem;
     height: 53.625rem;
     border-radius: 2.5rem;
-    background: linear-gradient(135deg, #373737 0%, #252628 22.90%, #000309 100%);
+
+    .function {
+        width: 26.4375rem;
+        height: 30.5625rem;
+        flex-shrink: 0;
+        padding-top: 1rem;
+        border-radius: 1.875rem;
+        background: rgba(230, 246, 255, 0.20);
+        box-shadow: 0px -5px 70px 0px rgba(0, 0, 0, 0.10);
+        background: rgb(0, 18, 63);
+        background: linear-gradient(38deg, rgba(0, 18, 63, 1) 0%, rgba(66, 134, 155, 1) 100%);
+
+        .num button {
+            border: none;
+            padding: 1rem;
+            margin: .5rem;
+            border-radius: 5rem;
+            display: flex;
+            width: 4.375rem;
+            height: 4.375rem;
+            justify-content: center;
+            flex-shrink: 0;
+            color: #373737;
+            text-align: center;
+            font-size: 1.625rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            background: rgba(255, 255, 255, 0.30);
+        }
+
+        .operators button {
+            padding-top: 1rem;
+            border: none;
+            border-radius: 5rem;
+            display: flex;
+            width: 4.375rem;
+            height: 4.375rem;
+            justify-content: center;
+            flex-shrink: 0;
+            color: #373737;
+            text-align: center;
+            font-size: 1.625rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            background: none;
+        }
+
+        .operators .container {
+            padding-left: 0;
+            border-radius: 2.5rem;
+            background: rgba(255, 255, 255, 0.30);
+            box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.05);
+            width: 4.375rem;
+            flex-shrink: 0;
+        }
+    }
+
+    article .result {
+        display: flex;
+        width: 10.3125rem;
+        height: 4.375rem;
+        justify-content: end;
+        color: #FBFBFB;
+        text-align: right;
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+
+        .equal {
+            background-image: url(../../assets/img/light.png);
+            height: 10px;
+            width: 16px;
+            margin-right: 20rem;
+            padding-right: 1rem;
+            position: fixed;
+            margin-top: 2rem;
+        }
+    }
+
+    .expression {
+        display: flex;
+        font-size: 2rem;
+        width: 22.1875rem;
+        height: 2.1875rem;
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        color: rgba(251, 251, 251, 0.50);
+        text-align: right;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top: 10rem;
+    }
 }
