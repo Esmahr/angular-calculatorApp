@@ -31,8 +31,8 @@ Angular CLI hakkında daha fazla yardım almak için `ng help` komutunu kullanab
 
 ### Light Mode
 
-![](/src/assets/lightmode.png)
+![](/src/assets/img/lightmode.png)
 
 ### Dark Mode
 
-![](/src/assets/darkmode.png)
+![](/src/assets/img/darkmode.png)
