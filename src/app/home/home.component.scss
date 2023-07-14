@@ -16,23 +16,6 @@
         }
     }
 
-    .switch input {
-        opacity: 0;
-        width: 0;
-        height: 0;
-    }
-
-    .slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        -webkit-transition: .4s;
-        transition: .4s;
-    }
-
     .slider:before {
         position: absolute;
         content: "";
@@ -51,94 +34,19 @@
         background-color: #576CBC;
     }
 
-    input:focus+.slider {
-        box-shadow: 0 0 1px #576CBC;
-    }
-
-    input:checked+.slider:before {
-        -webkit-transform: translateX(26px);
-        -ms-transform: translateX(26px);
-        transform: translateX(26px);
-    }
-
-    /* Rounded sliders */
-    .slider.round {
-        border-radius: 34px;
-    }
-
-    .slider.round:before {
-        border-radius: 50%;
-    }
-
-    width: 26.4375rem;
-    height: 53.625rem;
-    border-radius: 2.5rem;
     background: linear-gradient(135deg, #FEFEFE 0%, #F9F9F9 12.84%, #F3F3F3 32.53%, #E5E5E5 100%);
 
     .function {
-        width: 26.4375rem;
-        height: 30.5625rem;
-        flex-shrink: 0;
-        padding-top: 1rem;
-        border-radius: 1.875rem;
-        background: rgba(230, 246, 255, 0.20);
-        box-shadow: 0px -5px 70px 0px rgba(0, 0, 0, 0.10);
         background: rgb(66, 194, 255);
         background: linear-gradient(231deg, rgba(66, 194, 255, 1) 0%, rgba(239, 255, 253, 1) 100%);
-
-        .num button {
-            border: none;
-            padding: 1rem;
-            margin: .5rem;
-            border-radius: 5rem;
-            display: flex;
-            width: 4.375rem;
-            height: 4.375rem;
-            justify-content: center;
-            flex-shrink: 0;
-            color: #373737;
-            text-align: center;
-            font-size: 1.625rem;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-            background: rgba(255, 255, 255, 0.30);
-        }
-
-        .operators button {
-            padding-top: 1rem;
-            border: none;
-            border-radius: 5rem;
-            display: flex;
-            width: 4.375rem;
-            height: 4.375rem;
-            justify-content: center;
-            flex-shrink: 0;
-            color: #373737;
-            text-align: center;
-            font-size: 1.625rem;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-            background: none;
-        }
-
-        .operators .container {
-            padding-left: 0;
-            border-radius: 2.5rem;
-            background: rgba(255, 255, 255, 0.30);
-            box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.05);
-            width: 4.375rem;
-            flex-shrink: 0;
-        }
     }
 
     article .result {
+        color: #373737;
         display: flex;
         width: 10.3125rem;
         height: 4.375rem;
         justify-content: end;
-        color: #373737;
         text-align: right;
         font-size: 2.5rem;
         font-style: normal;
@@ -157,13 +65,13 @@
     }
 
     .expression {
+        color: rgba(25, 25, 25, 0.5);
         display: flex;
         width: 22.1875rem;
         height: 2.1875rem;
         flex-direction: column;
         justify-content: center;
         flex-shrink: 0;
-        color: rgba(25, 25, 25, 0.5);
         text-align: right;
         font-size: 2rem;
         font-style: normal;
@@ -192,23 +100,6 @@
         }
     }
 
-    .switch input {
-        opacity: 0;
-        width: 0;
-        height: 0;
-    }
-
-    .slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        -webkit-transition: .4s;
-        transition: .4s;
-    }
-
     .slider:before {
         position: absolute;
         content: "";
@@ -227,23 +118,65 @@
         background-color: #003661;
     }
 
+    .function {
+        background: rgb(0, 18, 63);
+        background: linear-gradient(38deg, rgba(0, 18, 63, 1) 0%, rgba(66, 134, 155, 1) 100%);
+    }
+
+    article .result {
+        color: #FBFBFB;
+
+        .equal {
+            background-image: url(../../assets/img/light.png);
+            height: 10px;
+            width: 16px;
+            margin-right: 20rem;
+            padding-right: 1rem;
+            position: fixed;
+            margin-top: 2rem;
+        }
+    }
+
+    .expression {
+        color: rgba(251, 251, 251, 0.50);
+    }
+}
+
+.bg-light,
+.bg-dark {
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
     input:focus+.slider {
         box-shadow: 0 0 1px #576CBC;
     }
 
-    input:checked+.slider:before {
-        -webkit-transform: translateX(26px);
-        -ms-transform: translateX(26px);
-        transform: translateX(26px);
-    }
-
-    /* Rounded sliders */
     .slider.round {
         border-radius: 34px;
     }
 
     .slider.round:before {
         border-radius: 50%;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
     }
 
     width: 26.4375rem;
@@ -258,8 +191,6 @@
         border-radius: 1.875rem;
         background: rgba(230, 246, 255, 0.20);
         box-shadow: 0px -5px 70px 0px rgba(0, 0, 0, 0.10);
-        background: rgb(0, 18, 63);
-        background: linear-gradient(38deg, rgba(0, 18, 63, 1) 0%, rgba(66, 134, 155, 1) 100%);
 
         .num button {
             border: none;
@@ -313,7 +244,6 @@
         width: 10.3125rem;
         height: 4.375rem;
         justify-content: end;
-        color: #FBFBFB;
         text-align: right;
         font-size: 2.5rem;
         font-style: normal;
@@ -321,7 +251,6 @@
         line-height: normal;
 
         .equal {
-            background-image: url(../../assets/img/light.png);
             height: 10px;
             width: 16px;
             margin-right: 20rem;
@@ -332,15 +261,15 @@
     }
 
     .expression {
+        color: rgba(25, 25, 25, 0.5);
         display: flex;
-        font-size: 2rem;
         width: 22.1875rem;
         height: 2.1875rem;
         flex-direction: column;
         justify-content: center;
         flex-shrink: 0;
-        color: rgba(251, 251, 251, 0.50);
         text-align: right;
+        font-size: 2rem;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
