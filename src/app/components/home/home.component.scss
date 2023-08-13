@@ -1,0 +1,272 @@
+.main {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    .bg-dark,
+    .bg-light {
+        width: 400px;
+        border-radius: 2.5rem;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+        .one {
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+
+            .history {
+                align-items: end;
+                justify-content: end;
+                border: none;
+                background-color: transparent;
+                margin-left: 20rem;
+            }
+
+            .switch {
+                position: fixed;
+                height: 34px;
+
+                input {
+                    opacity: 0;
+                    width: 0;
+                    height: 0;
+                }
+
+                .slider {
+                    position: absolute;
+                    cursor: pointer;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 70px;
+                    background-color: #A9DCFD;
+                    -webkit-transition: .4s;
+                    transition: .4s;
+                }
+
+                .slider:before {
+                    position: absolute;
+                    content: "";
+                    height: 30px;
+                    width: 30px;
+                    left: 10px;
+                    bottom: 4px;
+                    top: 2px;
+                    -webkit-transition: .4s;
+                    transition: .4s;
+                }
+
+                input:checked+.slider {
+                    background-color: #003661;
+                }
+
+
+                input:checked+.slider:before {
+                    -webkit-transform: translateX(26px);
+                    -ms-transform: translateX(26px);
+                    transform: translateX(26px);
+                }
+
+                /* Rounded sliders */
+                .slider.round {
+                    border-radius: 34px;
+                }
+
+                .slider.round:before {
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .screen {
+            flex-direction: column;
+            width: 100%;
+            justify-content: end;
+            height: 340px;
+            padding: 30px;
+
+            .calculation {
+                justify-content: end;
+                align-items: end;
+                flex-direction: column;
+                font-weight: 600;
+
+                .zero {
+                    font-size: 20px;
+                    opacity: 0.75;
+                }
+
+                .result {
+                    font-size: 40px;
+                }
+            }
+        }
+
+        .function {
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            height: 360px;
+            border-radius: 2.5rem;
+
+            .num {
+                width: 75%;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+
+                .operators,
+                .nums {
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-direction: row;
+                    width: 80%;
+
+                    button {
+                        border: none;
+                        outline: none;
+                        font-weight: 600;
+                        width: 50px;
+                        height: 50px
+                    }
+                }
+
+                .operators {
+                    border-radius: 50px;
+
+                    button {
+                        background: transparent;
+                        font-size: 18px;
+                    }
+                }
+
+                .nums {
+                    padding: 10px;
+
+                    button {
+                        border-radius: 50%;
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .func {
+                width: 25%;
+
+                .funcOp {
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-direction: column;
+                    border-radius: 50px;
+                    width: 60%;
+                    gap: 32px;
+
+                    button {
+                        border: none;
+                        outline: none;
+                        background: transparent;
+                        font-weight: 600;
+                        font-size: 20px;
+                    }
+
+                    .equal {
+                        width: 100%;
+                        height: 60px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .bg-dark {
+        color: #fff;
+
+        .one {
+            .switch {
+                .slider:before {
+                    background-image: url(../../../assets/bx_moon.svg);
+                }
+            }
+        }
+
+        .function {
+            background: rgb(0, 18, 63);
+            background: linear-gradient(39deg, rgba(0, 18, 63, 1) 0%, rgba(66, 134, 155, 1) 100%);
+
+            button {
+                color: #fff;
+                background-color: rgba(0, 34, 53, 0.40)
+            }
+
+            .num {
+                .operators {
+                    background-color: rgba(5, 5, 5, 0.30);
+                }
+
+                .nums {
+                    .button {
+                        background-color: rgba(0, 34, 53, 0.40)
+                    }
+                }
+            }
+
+            .func {
+                .funcOp {
+                    background-color: rgba(5, 5, 5, 0.30);
+
+                    .equal {
+                        background-color: rgba(0, 34, 53, 0.40);
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    .bg-light {
+
+        .one {
+            .switch {
+                .slider:before {
+                    background-image: url(../../../assets/bi_sun.svg);
+                }
+            }
+        }
+
+        .function {
+            background: rgb(90, 206, 255);
+            background: linear-gradient(207deg, rgba(90, 206, 255, 1) 0%, rgba(201, 239, 255, 1) 100%);
+
+            button {
+                background: rgba(230, 246, 255, 0.20);
+            }
+
+            .num {
+                .operators {
+                    background: rgba(255, 255, 255, 0.30);
+                }
+
+                .nums {
+                    .button {
+                        background: rgba(230, 246, 255, 0.20);
+                    }
+                }
+            }
+
+            .func {
+                .funcOp {
+                    background: rgba(255, 255, 255, 0.30);
+
+                    .equal {
+                        background: rgba(230, 246, 255, 0.20);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+<div class="main d-flex">
+    <div class="page mt-4 bg-{{title}}">
+        <div class="one d-flex">
+            <label class="switch mt-2 me-5">
+                <input (click)="togglebutton()" type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <button type="button" class="history mt-3" (click)="showHistory()"><img src="{{historyy}}" alt="">
+            </button>
+        </div>
+        <div class="screen d-flex">
+            <div class="calculation d-flex">
+                <div id="history-container"></div>
+                <div class="zero">{{expression}}</div>
+                <div class="result">{{result}}</div>
+            </div>
+            <div (click)="calculate()"> <img src="{{equal}}" alt=""></div>
+        </div>
+        <div class="function d-flex">
+            <div class="num d-flex">
+                <div class="row operators p-2">
+                    <button (click)="clear()">AC</button>
+                    <button (click)="appendOperator('(')">(</button>
+                    <button (click)="appendOperator(')')">)</button>
+                    <button (click)="appendOperator('%')">%</button>
+                </div>
+                <div class="row nums">
+                    <button (click)="appendValue('7')">7</button>
+                    <button (click)="appendValue('8')">8</button>
+                    <button (click)="appendValue('9')">9</button>
+                </div>
+                <div class="row nums">
+                    <button (click)="appendValue('4')">4</button>
+                    <button (click)="appendValue('5')">5</button>
+                    <button (click)="appendValue('6')">6</button>
+                </div>
+                <div class="row nums">
+                    <button (click)="appendValue('1')">1</button>
+                    <button (click)="appendValue('2')">2</button>
+                    <button (click)="appendValue('3')">3</button>
+                </div>
+                <div class="row nums">
+                    <button (click)="appendValue('00')">00</button>
+                    <button (click)="appendValue('0')">0</button>
+                    <button (click)="appendValue('.')">.</button>
+                </div>
+            </div>
+            <div class="func">
+                <div class="funcOp pt-2 d-flex">
+                    <button (click)="appendOperator('/')">/</button>
+                    <button (click)="appendOperator('*')">*</button>
+                    <button (click)="appendOperator('-')">-</button>
+                    <button (click)="appendOperator('+')">+</button>
+                    <button class="equal" (click)="calculate()">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
