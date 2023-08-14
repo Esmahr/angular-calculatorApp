@@ -1,23 +1,25 @@
-<div class="main d-flex">
+<div class="main d-flex flex-row justify-content-center">
     <div class="page mt-4 bg-{{title}}">
-        <div class="one d-flex">
+        <div class="one d-flex flex-row justify-content-center">
             <label class="switch mt-2 me-5">
                 <input (click)="togglebutton()" type="checkbox">
                 <span class="slider round"></span>
             </label>
-            <button type="button" class="history mt-3" (click)="showHistory()"><img src="{{historyy}}" alt="">
+            <button type="button" class="history mt-3 align-items-end justify-content-end" (click)="showHistory()"><img
+                    src="{{historyy}}" alt="">
             </button>
         </div>
-        <div class="screen d-flex">
-            <div class="calculation d-flex">
+        <div class="screen d-flex justify-content-end flex-column">
+            <div class="calculation d-flex justify-content-end align-items-end flex-column">
                 <div id="history-container"></div>
                 <div class="zero">{{expression}}</div>
                 <div class="result">{{result}}</div>
             </div>
             <div (click)="calculate()"> <img src="{{equal}}" alt=""></div>
+            <div class="errorMessage">{{errorMessage}}</div>
         </div>
-        <div class="function d-flex">
-            <div class="num d-flex">
+        <div class="function d-flex align-items-center flex-row">
+            <div class="num d-flex align-items-center flex-column">
                 <div class="row operators p-2">
                     <button (click)="clear()">AC</button>
                     <button (click)="appendOperator('(')">(</button>
@@ -46,7 +48,7 @@
                 </div>
             </div>
             <div class="func">
-                <div class="funcOp pt-2 d-flex">
+                <div class="funcOp pt-2 d-flex align-items-center flex-column">
                     <button (click)="appendOperator('/')">/</button>
                     <button (click)="appendOperator('*')">*</button>
                     <button (click)="appendOperator('-')">-</button>
