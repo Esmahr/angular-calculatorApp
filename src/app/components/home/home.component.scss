@@ -1,16 +1,11 @@
 .main {
-    width: 100%;
-    height: 100%;
 
-    .bg-dark,
-    .bg-light {
+    .page {
         width: 400px;
         border-radius: 2.5rem;
         box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 
         .one {
-            width: 100%;
-
             .history {
                 border: none;
                 background-color: transparent;
@@ -54,8 +49,6 @@
                 }
 
                 input:checked+.slider:before {
-                    -webkit-transform: translateX(26px);
-                    -ms-transform: translateX(26px);
                     transform: translateX(26px);
                 }
 
@@ -66,7 +59,6 @@
         }
 
         .screen {
-            width: 100%;
             height: 340px;
             padding: 30px;
 
@@ -90,7 +82,6 @@
         }
 
         .function {
-            width: 100%;
             height: 360px;
             border-radius: 2.5rem;
 
@@ -149,13 +140,11 @@
                     }
 
                     .equal {
-                        width: 100%;
                         height: 60px;
                         border-radius: 50%;
                     }
                 }
             }
-
         }
     }
 
@@ -191,15 +180,11 @@
                 .equal {
                     background-color: rgba(0, 34, 53, 0.40);
                 }
-
             }
-
         }
-
     }
 
     .bg-light {
-
         .one .switch .slider:before {
             background-image: url(../../../assets/bi_sun.svg);
         }
