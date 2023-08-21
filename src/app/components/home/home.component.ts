@@ -14,29 +14,29 @@ export class HomeComponent {
   errorMessage: string = '';
   history: (string | number)[] = [];
   expressionHistory: (string | number)[] = [];
-  historyy = '../../../assets/HistoryDark.svg';
-  equal = '../../../assets/equalL.svg';
 
-  isDarkTheme = true;
+  historyIconDark = '../../../assets/HistoryDark.svg';
+  historyIconLight = '../../../assets/HistoryLight.svg';
+  historyIcon = this.historyIconDark;
+  equalDark = '../../../assets/equalD.svg';
+  equalLight = '../../../assets/equalL.svg';
+  equalIcon = this.equalLight;
 
   togglebutton() {
-
-    this.isDarkTheme = !this.isDarkTheme
-
     if (this.title == "dark") {
       this.title = "light";
-      this.historyy = '../../../assets/HistoryDark.svg';
-      this.equal = '../../../assets/equalL.svg';
+      this.historyIcon = this.historyIconDark;
+      this.equalIcon = this.equalLight;
     }
     else {
       this.title = "dark"
-      this.historyy = '../../../assets/HistoryLight.svg';
-      this.equal = '../../../assets/equalD.svg';
+      this.historyIcon = this.historyIconLight;
+      this.equalIcon = this.equalDark;
     }
   }
 
   appendValue(value: string) {
-    if (this.expression === '0' && value !== '.') {
+    if ((this.expression === '0' || this.expression === '00') && value !== '.') {
       this.expression = value;
     } else {
       if (value === '.' && (this.expression === '' || this.lastOperator !== '')) {
@@ -48,38 +48,40 @@ export class HomeComponent {
   }
 
   appendOperator(operator: string) {
-    const validOperators = ['+', '-', '*', '/'];
-
+    const validOperators = ['+', '-', '*', '/', '%'];
+  
     if (this.expression === '0') {
-      this.expression = '';
+      if (validOperators.includes(operator) || operator === '(') {
+        this.expression += operator;
+      }
+      return;
     }
-
+  
+    const lastChar = this.expression.slice(-1);
+  
     if (validOperators.includes(operator)) {
-      if (this.lastOperator !== '') {
-        if (this.lastOperator !== '(') {
-          this.expression = this.expression.slice(0, -1) + operator;
-        }
+      if (validOperators.includes(lastChar)) {
+        // Replace the last operator with the new operator
+        this.expression = this.expression.slice(0, -1) + operator;
       } else {
         this.expression += operator;
       }
-      this.lastOperator = operator;
     } else if (operator === '(') {
-      if (this.lastOperator !== '') {
-        if (!validOperators.includes(this.lastOperator)) {
-          this.expression += '*(';
-        }
-      } else {
-        this.expression += '(';
+      if (lastChar === '' || lastChar === '(' || validOperators.includes(lastChar) || /^\d$/.test(lastChar)) {
+        this.expression += operator;
       }
     } else if (operator === ')') {
       const openParenCount = (this.expression.match(/\(/g) || []).length;
       const closeParenCount = (this.expression.match(/\)/g) || []).length;
-
-      if (openParenCount > closeParenCount && this.lastOperator !== '(') {
+  
+      if (openParenCount > closeParenCount && lastChar !== '(' && !validOperators.includes(lastChar)) {
         this.expression += operator;
       }
     }
+  
+    this.lastOperator = operator;
   }
+  
 
   calculate() {
     try {
